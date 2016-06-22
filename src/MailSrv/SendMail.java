@@ -19,9 +19,10 @@ import com.sun.mail.util.MailSSLSocketFactory;
 public class SendMail {
 
 	
-	private final static String username = "dpsmarcelly@hotmail.com"; // do painel de controle do SMTP
-	private final static String password = "Barbaridade."; // do painel de controle do SMTP
-    private final static boolean debug = true;
+	private final static String username = "psdmarcelly@gmail.com"; // do painel de controle do SMTP
+	private final static String password = "barbaridade"; // do painel de controle do SMTP
+	private final static Protocol protocol = Protocol.SMTPS;
+	private final static boolean debug = true;
     
     public static void main(String[] args) throws Exception {
     	/**
@@ -39,15 +40,22 @@ public class SendMail {
 		NodeList Port = document.getElementsByTagName("porta");
 		String Porta = Port.item(0).getTextContent();
     	
-		String to [] =  {"dpsmarcelly@gmail.com","alexandre.penteado@geopx.com.br","dvd.pansardis@gmail.com", "david.pansardis@geopx.com.br"};
-		String from = "dpsmarcelly@hotmail.com";
+		String to [] =  {"dpsmarcelly@gmail.com"};
+		String from = "psdmarcelly@gmail.com";
     	
     	Properties props = new Properties();
-	    props.put("mail.transport.protocol",Protocolo);
-	    props.put("mail.smtp.starttls.enable","true"); 
+	    props.put("mail.transport.protocol",Protocolo); 
 	    props.put("mail.smtp.host", Servidor);
 	    props.put("mail.smtp.port", Porta);       
 	    props.put("mail.smtp.auth", "true");
+	    switch (protocol) {
+        case SMTPS:
+            props.put("mail.smtp.ssl.enable", true);
+            break;
+        case TLS:
+            props.put("mail.smtp.starttls.enable", true);
+            break;
+    }
         
 	    /**
 	     * Verificação de segurança SSL

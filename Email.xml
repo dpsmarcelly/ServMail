@@ -1,5 +1,5 @@
 <Constante>
 		<protocolo>smtp</protocolo>
-		<servidor>smtp.live.com</servidor>
-		<porta>25</porta>
+		<servidor>smtp.gmail.com</servidor>
+		<porta>465</porta>
 </Constante>
