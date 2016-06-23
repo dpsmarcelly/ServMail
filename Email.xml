@@ -1,5 +1,5 @@
-<Constante>
-		<protocolo>smtp</protocolo>
-		<servidor>smtp.gmail.com</servidor>
-		<porta>465</porta>
-</Constante>
+<emailprop>
+		<protocol>smtp</protocol>
+		<server>smtp.gmail.com</server>
+		<port>465</port>
+</emailprop>

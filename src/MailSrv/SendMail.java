@@ -33,11 +33,11 @@ public class SendMail {
 		Document document = Builder.parse(new File("Email.xml"));
 		document.getDocumentElement().normalize();
 	
-		NodeList Protocol = document.getElementsByTagName("protocolo");
+		NodeList Protocol = document.getElementsByTagName("protocol");
 		String Protocolo = Protocol.item(0).getTextContent();
-		NodeList server = document.getElementsByTagName("servidor");
+		NodeList server = document.getElementsByTagName("server");
 		String Servidor = server.item(0).getTextContent();
-		NodeList Port = document.getElementsByTagName("porta");
+		NodeList Port = document.getElementsByTagName("port");
 		String Porta = Port.item(0).getTextContent();
     	
 		String to [] =  {"dpsmarcelly@gmail.com"};
