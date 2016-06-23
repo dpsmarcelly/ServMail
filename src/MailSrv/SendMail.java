@@ -55,6 +55,8 @@ public class SendMail {
         case TLS:
             props.put("mail.smtp.starttls.enable", true);
             break;
+		default:
+			break;
     }
         
 	    /**
