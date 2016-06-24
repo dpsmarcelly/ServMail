@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Class>
+	<constante>
+		<protocolo>smtp</protocolo>
+		<servidor>smtp.geopx.com.br</servidor>
+		<porta>587</porta>
+	</constante>
+</Class>

@@ -1,4 +1,4 @@
-package MailSrv;
+package Controller;
 
 /**
  * Classe responsável por representra a possivel escolha de protocolo para 
@@ -6,7 +6,7 @@ package MailSrv;
  * @author marcelly.paula
  *
  */
-public enum Protocol {
+public enum Protocoll {
 	STMP,
 	SMTPS,
 	TLS
